@@ -23,7 +23,7 @@ const CountryList = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const countryDetails = useSelector(state => state.mainReducer.caseDetails);
+  const countryDetails = useSelector(state => state.mainReducer.countryDetails);
 
   useEffect(() => {
     loadDetails();
@@ -124,7 +124,7 @@ const CountryList = () => {
             ) : (
               <View>
                 <FlatList
-                  data={caseDetailsList}
+                  data={countryDetails}
                   maxToRenderPerBatch={6}
                   initialNumToRender={3}
                   onRefresh={loadDetails}

@@ -19,6 +19,7 @@ const URL = "http://universities.hipolabs.com/search?country=United+Kingdom";
             .get(URL, config)
 			.then((res) => {
 				const resJsonData = res.data;
+				console.log("HAHAHA", resJsonData)
 				dispatch({
 					type: GET_COUNTRY_DETAILS,
 					payload: resJsonData,

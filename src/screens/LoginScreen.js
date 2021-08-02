@@ -69,17 +69,16 @@ const LoginScreen = ({navigation}) => {
       }, 500)
     
 
-      }
-    else {
+    } else {
+      setAlertContent({
+        status: true,
+        message: "Kindly check credentials"
+      });
+      setTimeout(() => {
         setAlertContent({
-            status: true,
-            message: "Kindly check credentials"
+          status: false,
         });
-        setTimeout(() => {
-            setAlertContent({
-                status: false,
-            });
-        }, 500)
+      }, 500)
     }
   };
 
